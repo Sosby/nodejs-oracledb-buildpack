@@ -4,8 +4,8 @@ install_oracle_libraries(){
   echo "Installing oracle libraries"
   mkdir -p $build_dir/oracle
   cd $build_dir/oracle
-  local basic_download_url="https://transfer.sh/xWc2U/instantclient-basiclite.zip"
-  local sdk_download_url="https://transfer.sh/9dzwj/instantclient-sdk.zip"
+  local basic_download_url="https://artifactory.int.8451.com/artifactory/nodejs-oracle/instantclient-basic-linux.x64.zip"
+  local sdk_download_url="https://artifactory.int.8451.com/artifactory/nodejs-oracle/instantclient-sdk-linux.x64.zip"
   curl -k "$basic_download_url" --silent --fail --retry 5 --retry-max-time 15 -o instantclient-basic.zip
   echo "Downloaded [$basic_download_url]"
   curl -k "$sdk_download_url" --silent --fail --retry 5 --retry-max-time 15 -o instantclient-sdk.zip
